@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Coiny&family=Kanit:ital,wght@0,400;1,200&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500&family=Phudu:wght@800&family=Poppins&family=Roboto+Mono:ital,wght@0,200;1,500&family=Roboto:wght@100&family=Rubik+Iso&display=swap");
+* {
+  font-family: lato;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.side-highlight {
+  background-color: #09920c;
+  border: 1px solid #09920c;
+  padding: 7px 15px;
+  border-width: 100%;
+  color: #ffffff;
+}
+
+.sidebar-display {
+  display: block !important;
+}
+
+.login {
+  position: absolute;
+  z-index: 101;
+  left: 0%;
+  width: 50%;
+  border-radius: 15px;
+  border-width: 0px;
+  height: 20rem;
+}
+.login div {
+  font-size: 10px !important;
+  height: 100%;
+}
+.login div input {
+  width: 40%;
+}
+.login div input[type=submit] {
+  width: 60%;
+  background-color: #09920c;
+  border-radius: 10px;
+}
+
+nav .student-image-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+nav .student-image-icon img {
+  width: 100%;
+  height: 100%;
+}
+nav .nav-logo {
+  display: none;
+}
+nav .btn-outline-success:hover {
+  color: white;
+  background-color: #09920c;
+}
+
+.menu .bi {
+  font-size: 40px;
+  font-weight: bolder;
+  position: absolute;
+  right: 5%;
+  display: none;
+}
+
+.piechart section {
+  width: 50%;
+  height: 33vh;
+}
+.piechart .demo {
+  box-sizing: border-box;
+  height: 50vh;
+  border-radius: 15px;
+  background-color: #faeeff;
+}
+.piechart .title {
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.piechart .chart {
+  width: 50% !important;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #e5f8e5;
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+}
+.sidebar button {
+  background-color: #d9d9d9;
+}
+.sidebar .buttons div {
+  margin-bottom: 25px;
+  padding-left: 15px;
+}
+.sidebar .buttons div:hover {
+  background-color: #09920c;
+  border: 1px solid #09920c;
+  padding: 7px 15px;
+  border-width: 100%;
+  color: #ffffff;
+}
+
+.dashboard {
+  width: 90%;
+  margin-left: 21%;
+}
+.dashboard .main-dashboard {
+  background-color: #f8fff8;
+  height: 170vh;
+  font-family: lato;
+  font-weight: 600;
+}
+.dashboard .main-dashboard .card-col {
+  height: 20vh;
+  margin-left: 8px;
+  width: 20%;
+  border-radius: 15px;
+  background-color: #92098f;
+}
+.dashboard .main-dashboard .card-col span {
+  color: #09920c;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 90px !important;
+}
+.dashboard .main-dashboard .card-col .icon {
+  font-size: 30px;
+  margin-top: 10px;
+  color: white;
+}
+
+.cont {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.card-col:nth-child(1) {
+  background-image: linear-gradient(90deg, #92098f 20%, #faeeff 20%);
+}
+
+.card-col:nth-child(2) {
+  background-image: linear-gradient(90deg, #09920c 20%, #e5f8e5 20%);
+}
+
+.card-col:nth-child(3) {
+  background-image: linear-gradient(90deg, #094a92 20%, #e5f2ff 20%);
+}
+
+.card-col:nth-child(4) {
+  background-image: linear-gradient(90deg, #925109 20%, #e9dcce 20%);
+}
+
+@media (max-width: 776px) {
+  .demo2 {
+    padding: 12px;
+    margin: 0px;
+  }
+  .demo2 .reg-courses {
+    margin: 9px 6rem;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .nav-logo {
+    display: block !important;
+    position: absolute;
+    top: 0px;
+    left: 60%;
+  }
+  .menu .bi {
+    display: block;
+  }
+  .nav-item {
+    position: absolute;
+    left: 0px !important;
+  }
+  .sidebar {
+    position: absolute;
+    height: 60%;
+    top: 10%;
+    right: 4%;
+    width: 33%;
+    display: none;
+    z-index: 5;
+    border-radius: 15px;
+    transition: all 0.5s ease-out;
+    transition-duration: 2s;
+  }
+  .dashboard {
+    margin-top: 5px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .dashboard .grow {
+    display: block !important;
+  }
+  .dashboard .grow .col {
+    width: 70%;
+    margin: 15px auto;
+    padding-left: 35px;
+  }
+  .student-image-icon {
+    position: absolute;
+    right: 10% !important;
+  }
+  .piechart .demo table {
+    margin-top: 6rem;
+  }
+  .piechart .demo .title {
+    margin-top: 15rem;
+  }
+  .piechart .row {
+    display: block !important;
+  }
+  .piechart .row div {
+    margin: 7px auto !important;
+    width: 80%;
+  }
+  .main-dashboard {
+    height: 340vh !important;
+  }
+  .main-dashboard .upper-part span {
+    margin-left: 50%;
+  }
+  .list-of-graduants {
+    margin-bottom: 5rem;
+    display: block !important;
+  }
+  .list-of-graduants .grad-div {
+    margin-bottom: 2rem;
+  }
+  .list-of-graduants .grad-div .grad-txt {
+    background-position: calc(15rem - 5px) 5px !important;
+  }
+  .page-section {
+    margin-top: 11rem;
+  }
+  .payments .list-of-students .grad-div:nth-child(2) {
+    text-align: left !important;
+  }
+}
+@media (min-width: 777px) and (max-width: 958px) {
+  .page-section {
+    margin-top: 11rem;
+    margin-bottom: 25px;
+  }
+  .student-list {
+    margin-top: 3rem !important;
+    height: 35rem !important;
+  }
+  .main-dashboard {
+    height: 240vh !important;
+  }
+  .grow {
+    display: block;
+    position: relative;
+    height: 20rem;
+  }
+  .grow .col:nth-child(1) {
+    float: left;
+    width: 15rem;
+    margin-bottom: 20px;
+    margin-right: 2rem;
+  }
+  .grow .col:nth-child(2) {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 15rem;
+    margin-bottom: 20px;
+  }
+  .grow .col:nth-child(3) {
+    width: 15rem;
+    position: absolute;
+    bottom: 0px;
+    right: 9px;
+  }
+  .grow .col:nth-child(4) {
+    width: 15rem;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  .piechart .actual-chart {
+    height: 7rem;
+  }
+  .piechart .chart {
+    height: 7rem !important;
+  }
+}
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||End of tablet responsiveness||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.actual-chart {
+  border-radius: 50%;
+  transform: rotate(30deg);
+  background-image: conic-gradient(#92098f 0deg, #92098f 130deg, #09920c 130deg);
+}
+
+.gender-section {
+  margin-top: 7rem;
+}
+.gender-section .m-box {
+  background-color: #09920c;
+}
+.gender-section .f-box {
+  background-color: #92098f;
+}
+
+.box, .demo2 .programme-table .uiux-box, .demo2 .programme-table .be-box, .demo2 .programme-table .fe-box, .demo2 .programme-table .fs-box, .gender-section .m-box, .gender-section .f-box {
+  width: 0.6rem;
+  height: 0.6rem;
+  max-width: 0.6rem;
+  max-height: 0.9rem;
+  min-width: 0.5rem;
+  min-height: 0.7rem;
+  border-radius: 2px;
+}
+
+.total-num {
+  color: #09920c;
+}
+
+.demo2 {
+  background-color: #e5f2ff;
+  border-radius: 15px;
+}
+.demo2 .programme-table .fs-box {
+  background-color: #09920c;
+}
+.demo2 .programme-table .fe-box {
+  background-color: #094a92;
+}
+.demo2 .programme-table .be-box {
+  background-color: #925109;
+}
+.demo2 .programme-table .uiux-box {
+  background-color: #92098f;
+}
+.demo2 .programme-table tr {
+  padding: auto;
+}
+.demo2 .chart {
+  transform: rotate(-20deg);
+  height: 16rem;
+  background-image: conic-gradient(#094a92 0deg, #094a92 72deg, #925109 72deg, #925109 151deg, #92098f 151deg, #92098f 230deg, #09920c 230deg);
+}
+
+.little-words {
+  font-size: 12px;
+}
+
+.list-of-graduants {
+  width: 90%;
+  height: 4rem;
+  font-size: 20px;
+}
+.list-of-graduants input {
+  height: 2rem;
+  font-size: 15px;
+}
+.list-of-graduants .grad-div {
+  width: 25rem;
+}
+.list-of-graduants .grad-div .grad-txt {
+  width: 60%;
+  background-image: url("/image/search.svg");
+  background-repeat: no-repeat;
+  background-position: calc(13rem - 5px) 5px;
+}
+.list-of-graduants .btn1 {
+  background-color: #ddeed6;
+}
+
+.student-list {
+  padding-top: 5rem;
+  border-radius: 15px;
+  height: 24rem;
+  background-color: white;
+}
+.student-list table {
+  width: 100%;
+  background-color: white;
+}
+.student-list tr {
+  border-bottom: 2px solid black;
+}
+.student-list td {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.payments .payment-col-2, .payments .payment-col-1 {
+  width: 40%;
+  height: 13rem;
+}
+
+.payments .payment-col-2, .payments .payment-col-1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.payments {
+  display: none;
+  height: 50rem;
+  background-color: #f8fff8;
+}
+.payments .payment-col-1 {
+  border-radius: 15px;
+  background-image: linear-gradient(90deg, #92098f 20%, #faeeff 20%);
+}
+.payments .payment-col-1 span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #92098f;
+}
+.payments .payment-col-2 {
+  border-radius: 15px;
+  background-image: linear-gradient(90deg, #094a92 20%, #e5f2ff 20%);
+}
+.payments .payment-col-2 span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #094a92;
+}
+.payments .icon {
+  font-size: 30px;
+  margin-top: 10px;
+  color: white;
+}
+.payments .list-of-students .btn1 {
+  background-color: #ddeed6;
+}
+.payments .payment-grad-txt {
+  width: 60%;
+  background-image: url("/image/search.svg");
+  background-repeat: no-repeat;
+  background-position: 20rem 5px;
+}
+.payments .table-div {
+  border-radius: 10px;
+  background-color: white;
+  padding: 3px;
+  margin-top: 2rem;
+}
+.payments .table-div .student-table {
+  width: 100%;
+}
+.payments .table-div .student-table td {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.payments .pop-up {
+  border-radius: 13px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #ffffff;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+  text-decoration: none !important;
+}
+
+.page-section section {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page-section .next-div {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page-section .go-btn {
+  background-color: #ddeed6;
+  border-radius: 4px;
+  border-style: none;
+  padding: 5px 10px;
+}
+.page-section .input-tag {
+  width: 2rem;
+  border-radius: 3px;
+}/*# sourceMappingURL=index.css.map */

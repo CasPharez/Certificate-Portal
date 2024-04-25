@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./dist/css/solo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <script src="https://kit.fontawesome.com/012aae2d8e.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./dist/css/index.css" />
+</head>
+
+<body>
+  <div class="container-fluid d-md-flex cont">
+    <!-- The side bar panel -->
+    <div class="sidebar ">
+      <button class="ms-5 mt-2 logo">LOGO</button>
+      <div class="buttons mt-5">
+        <div id="dashboard"><i class="bi bi-columns-gap"></i> Dashboard</div>
+        <div id="student"><i class="fa-solid fa-users"></i> Student</div>
+        <div id="payment"><i class="bi bi-cash-stack"></i> Payment</div>
+        <div id="solo-project"><i class="bi bi-briefcase"></i> Solo Project</div>
+        <div id="announcement"><i class="bi bi-megaphone"></i> Announcement</div>
+        <div id="setting"><i class="bi bi-gear"></i> Setting</div>
+      </div>
+    </div>
+    <!-- End of the side bar -->
+
+    <!-- The Nav bar on the dashboard -->
+    <div class="dashboard">
+      <nav class="nav position-relative ">
+        <ul class="nav-item position-absolute end-50">
+          <li class="nav-link">
+            <!-- <button class="btn btn-outline-success rounded-3 admin-login">
+              Admin Login
+            </button> -->
+            <button class="nav-logo">LOGO</button>
+          </li>
+        </ul>
+        <div class="rounded-circle position-absolute end-0 student-image-icon">
+          <img src="./image/Rectangle 56.png" width="50px" height="50px" alt="students image">
+        </div>
+
+
+      </nav>
+
+      <span class="menu"><i class="bi bi-list"></i></span>
+      <!-- The nav bar end here -->
+
+      <!-- The main dashboard that will be fluctuated  -->
+      <div class="main-dashboard  mt-5">
+        <div class="upper-part pt-3">
+          <span>Admin Dashboard</span>
+          <div class="grow row">
+            <!-- First card -->
+            <div class="col card-col">
+              <div class="card-holder d-flex pt-4">
+                <div class="ms-1  icon ">
+                  <i class="bi bi-people"></i>
+                </div>
+                <div class="ms-5  text-center">
+                  Total Student <br>
+                  <span>100</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- second card  -->
+            <div class="col card-col">
+              <div class="card-holder d-flex pt-4">
+                <div class="ms-1 icon">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+                <div class="ms-5  text-center">
+                  Total Amount <br />
+                  <span>100</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- third card -->
+            <div class="col card-col">
+
+              <div class="d-flex mt-4">
+                <div class="ms-1 icon"><i class="bi bi-briefcase"></i></div>
+                <div class="ms-5 text-center">Total Project <br><span>100</span></div>
+              </div>
+            </div>
+
+            <!-- fourth card -->
+            <div class="col card-col">
+              <div class="card-holder d-flex pt-4">
+                <div class="ms-2 icon ">
+                  <i class="fa-regular fa-id-card"></i>
+                </div>
+                <div class="ms-5  text-center">
+                  Total Certificate<br />
+                  <span>100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- The Pie chart -->
+          <div class="piechart ms-3 mt-5">
+
+            <!-- demography of Students -->
+            <div class="row  justify-content-between">
+              <div class="col-5  position-relative demo">
+                <span class=" title ">Demography of Students</span>
+                <div class="section d-flex mt-5">
+                  <section class="actual-chart "></section>
+                  <section class="  ps-3 ">
+                    <p>Total &nbsp;&nbsp;&nbsp;&nbsp;
+                      <span class="total-num">2000</span>
+                    </p>
+                    <div class="row  gender-section little-words">
+                      <table>
+                        <th>
+                          <div class="m-box"></div>
+                        </th>
+                        <th>Male</th>
+                        <th>60%</th>
+                        <tr>
+                          <td>
+                            <div class="f-box"></div>
+                          </td>
+                          <td>Female</td>
+                          <td>40%</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+
+              <!-- Registered Courses -->
+              <div class="col-5 me-3 demo2">
+                <p class="reg-courses">Registered Courses</p>
+                <div class="row justify-content-between g-1">
+                  <div class="col-5  chart rounded-circle"></div>
+                  <div class="col-5  gs-2">
+                    Total <span class="total-num">2000</span>
+                    <div class="row little-words programme-table mt-5">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="fs-box"></div>
+                          </td>
+                          <td>Full Stack</td>
+                          <td>30%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="fe-box"></div>
+                          </td>
+                          <td>Front End</td>
+                          <td>20%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="be-box"></div>
+                          </td>
+                          <td>Back End</td>
+                          <td>25%</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="uiux-box"></div>
+                          </td>
+                          <td>UI/UX Design</td>
+                          <td>25%</td>
+                        </tr>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- list of graduants -->
+        <div class="list-of-graduants mt-5   ">
+          <div class="row  gap-1 justify-content-around">
+            <div class="grad-div  ">
+              <label for="graduands" class="col-form-label">List of Graduands</label> &nbsp;
+              <input type="text" name="graduands" class="col-form-control graduands ms-3 mt-2 rounded-3" id="graduands">
+            </div>
+            <div class="grad-div  text-end ">
+              <input type="text" placeholder="Search any name..." class="col-form-control rounded-3 grad-txt me-3">
+              <input type="button" value="Filter" class=" btn btn1 ">
+            </div>
+          </div>
+        </div>
+        <!-- End of list of graduants -->
+
+        <!-- table for student list -->
+        <div class="student-list mx-5 my-2  p-4">
+          <table class="">
+            <th>Full name</th>
+            <th>Username</th>
+            <th>Passcode</th>
+            <th>Batch No</th>
+            <th>Cohort Number</th>
+            <th>Course</th>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+            <tr>
+              <td>Onwumeleze Adekola Johnson</td>
+              <td>Onwukola7</td>
+              <td>Pass-12345</td>
+              <td>Cohort 13</td>
+              <td>Batch 2</td>
+              <td>Full Stack</td>
+            </tr>
+
+          </table>
+        </div>
+
+        <!-- Next page section -->
+        <div class="row mx-5 justify-content-between page-section mb-5">
+          <section class="col-4 ">
+            <div class="row ">
+              <div class="col border-2  border-dark border-end next-div">
+                <a href="#" class="text-decoration-none">First</a>
+              </div>
+              <div class="col border-2 border-dark border-end next-div">Prev</div>
+              <div class="col border-2 border-dark border-end next-div">Next</div>
+              <div class="col border-2 border-dark border-end next-div">Last</div>
+            </div>
+          </section>
+          <section class="col-4">1-10</section>
+          <section class="col-4">Page &nbsp;&nbsp;
+            <input type="text" class="input-tag rounded-3" name="" id="">&nbsp;&nbsp;
+            / &nbsp;<span>200</span>&nbsp;&nbsp;
+            <input type="button" class="go-btn" value="Go">
+
+          </section>
+        </div>
+
+      </div>
+      <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||
+  ||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      <!-- The payments page -->
+      <div class="payments mt-5">
+        <h3>Manage Payment</h3>
+        <!-- the cards -->
+        <div class="card-holder ms-5 gap-5 ps-2 d-flex pt-4">
+          <!-- card1 -->
+          <div class="payment-col-1 pe-5">
+            <div class="card-holder d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="ms-5  text-center">
+                Income in this year <br>
+                <span>&#8358;100,000</span>
+                <br>+ <br> $10,000
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="payment-col-2">
+            <div class="card-holder d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+              <div class="ms-5  text-center">
+                Income in this year <br>
+                <span>&#8358;100,000</span>
+                <br>+ <br> $10,000
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of card -->
+
+        <!-- list of Students -->
+        <div class="list-of-students mt-5  ps-1 ">
+          <div class="row justify-content-around">
+            <div class="col-md-6   grad-div">
+              <label for="graduands" class="col-form-label">List of Students</label> &nbsp;
+              <input type="text" name="graduands" class="col-form-control graduands  rounded-3" value="2000"
+                id="payment-grad">
+            </div>
+            <div class="  grad-div  col-md-6  text-end mb-3">
+              <input type="text" placeholder="Search any name..." class="col-form-control rounded-3 payment-grad-txt">
+              <input type="button" value="Filter" class=" btn btn1 ms-5  align-item-end">
+            </div>
+          </div>
+        </div>
+        <!-- student Table begins here -->
+        <div class="table-div  mx-4 ">
+          <table class="student-table">
+            <th><input type="checkbox" name="" id=""></th>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Passcode</th>
+            <th>Pay Status</th>
+            <th>Confirmation</th>
+            <th></th>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Send Emails</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Send Emails</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Send Emails</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>
+
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Send Emails</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>Paid</td>
+              <td>Pending</td>
+              <td>
+
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Send Emails</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+
+
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- The next tab section for payment page -->
+        <div class="row mx-5 mt-4 justify-content-between page-section ">
+          <section class="col-4 ">
+            <div class="row ">
+              <div class="col border-2  border-dark border-end next-div">
+                <a href="#">First</a>
+              </div>
+              <div class="col border-2 border-dark border-end next-div">Prev</div>
+              <div class="col border-2 border-dark border-end next-div">Next</div>
+              <div class="col border-2 border-dark border-end next-div">Last</div>
+            </div>
+          </section>
+          <section class="col-4 ">1-10</section>
+          <section class="col-4">Page &nbsp;&nbsp;
+            <input type="text" class="input-tag rounded-3" name="" id="">&nbsp;&nbsp;
+            / &nbsp;<span>200</span>&nbsp;&nbsp;
+            <input type="button" class="go-btn" value="Go">
+
+          </section>
+        </div>
+      </div>
+      <!-- solo project Management starts here
+     -->
+
+      <div class="solo-projects mt-5">
+        <h3>Manage solo project</h3>
+        <!-- the cards -->
+        <div class="grow d-flex g-1">
+          <!-- card1 -->
+          <div class="col card-col">
+            <div class="card-holder1 d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="total  text-center">
+                <h4>total projects</h4>
+                <span>1000</span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col card-col">
+            <div class="card-holder d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="approved  text-center">
+                <h4>Approved projects</h4>
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="col card-col">
+            <div class="card-holder d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class=" Pending  text-center">
+                <h4>Pending projects</h4>
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 stop -->
+          <!-- card 4 stars -->
+          <div class="col card-col">
+            <div class="card-holder d-flex pt-4">
+              <div class="ms-3  icon ">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <div class="unapproved text-center">
+                <h4>unapproved projects</h4>
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of card -->
+        <div class="view-project mt-4">
+
+          <a href="" class="">View All Projects </a>
+        </div>
+
+
+        <!-- list of Students -->
+        <div class="list-of-students mt-5  ps-1 ">
+          <div class="row justify-content-between">
+            <div class="col-md-6   grad-div">
+              <label for="graduands" class="col-form-label">List of Students</label> &nbsp;
+              <input type="text" name="graduands" class="col-form-control graduands  rounded-3" value="2000"
+                id="payment-grad">
+            </div>
+            <div class="  grad-div  col-md-6  text-end mb-3">
+              <input type="text" placeholder="Search any name..." class="col-form-control rounded-3 payment-grad-txt">
+              <input type="button" value="Filter" class=" btn btn1 ms-5  align-item-end">
+            </div>
+          </div>
+
+
+        </div>
+        <!-- student Table begins here -->
+        <div class="table-div  mx-4 ">
+          <table class="student-table">
+            <th><input type="checkbox" name="" id=""></th>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Passcode</th>
+            <th>Project links</th>
+            <th>score</th>
+            <th>Status</th>
+            <th></th>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>www.project.com</td>
+              <td>N/A</td>
+              <td>Pending</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">write notes</a></li>
+                    <li><a class="dropdown-item" href="#">View Emails</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>www.project.com</td>
+              <td>75%</td>
+              <td>Approved</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">write notes</a></li>
+                    <li><a class="dropdown-item" href="#">View details</a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>www.project.com</td>
+              <td>40%</td>
+              <td>unapproved</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">write Note</a></li>
+                    <li><a class="dropdown-item" href="#">View details</a></li>
+                  </ul>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>www.project.com</td>
+              <td>69%</td>
+              <td>Approved</td>
+              <td>
+
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Write Note</a></li>
+                    <li><a class="dropdown-item" href="#">View details</a></li>
+                  </ul>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <th><input type="checkbox" name="" id=""></th>
+              <td>Onwumelede Adekola Johnson</td>
+              <td>OnwukolaJ</td>
+              <td>PASS-12345</td>
+              <td>www.project.com</td>
+              <td>80%</td>
+              <td>Approved</td>
+              <td>
+
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Write Note</a></li>
+                    <li><a class="dropdown-item" href="#">View Details</a></li>
+                  </ul>
+                </div>
+
+
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- solo-project Management stop here -->
+      <div class="announcements"></div>
+      <div class="settings"></div>
+    </div>
+
+    <script src="./Javascript/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+/* solo project style stats here */
+.solo-projects {
+    display:none;
+    height: 50rem;
+    background-color: #f8fff8;
+  }
+  
+  .solo-projects .card-col {
+    height: 20vh;
+    margin-left: 8px;
+    width: 20%;
+    border-radius: 15px;
+    background-color: #92098f;
+  }
+  .solo-projects span {
+    color: #09920c;
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+  
+  .solo-projects h4 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+  
+  .solo-projects .card-col .icon {
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .solo-projects .list-of-students .btn1 {
+    background-color: #ddeed6;
+  }
+  .solo-projects .payment-grad-txt {
+    width: 50%;
+    background-image: url("/image/search.svg");
+    background-repeat: no-repeat;
+    background-position: 16rem 9px;
+  }
+  .solo-projects .table-div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 3px;
+    margin-top: 2rem;
+  }
+  .solo-projects .table-div .student-table {
+    width: 100%;
+  }
+  .solo-projects .table-div .student-table td {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+  .solo-projects .card-col:nth-child(1) {
+    background-image: linear-gradient(90deg, #92098f 20%, #faeeff 20%);
+  }
+  
+  .solo-projects .card-col:nth-child(2) {
+    background-image: linear-gradient(90deg, #09920c 20%, #e5f8e5 20%);
+  }
+  
+  .solo-projects .card-col:nth-child(3) {
+    background-image: linear-gradient(90deg, #925109 20%, #e9dcce 20%);
+  }
+  
+  .solo-projects .card-col:nth-child(4) {
+    background-image: linear-gradient(90deg, #d11a2a, 20%, #f6d1d4 20%);
+  }
+  .Pending,
+  .total,
+  .approved {
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+  
+  .unapproved {
+    margin-left: 5rem;
+    margin-top: 0.6rem;
+  }
+  
+  .solo-projects .pop-up {
+    border-radius: 13px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ffffff;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: none;
+    text-decoration: none !important;
+  }
+  

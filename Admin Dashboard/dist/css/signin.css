@@ -1,0 +1,93 @@
+body{
+    background: #fdfdfd;
+    overflow-x: hidden;
+}
+.form{
+    margin: 8rem 7rem 3rem 4rem;
+    position: relative;
+}
+.form .logo img{
+    position: absolute;
+    top: -28%;
+    right: -17%;
+}
+.google{
+    padding: .5rem;
+    
+    border: 1px solid #33C946;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+.form .google a{
+    text-decoration: none;
+    color: inherit;
+}
+.form input{
+    height: 3rem;
+    background: #EDEDED;
+}
+.form .submit-btn{
+    border: none;
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(85deg, #33C946 0%, #011E05 100%);
+    border-radius: 2rem;
+    
+    font-weight: 600;
+}
+.form .submit-btn:hover{
+    opacity:0.7 ;
+    transition: 1s;
+}
+.form .form-info h4 {
+    display: inline-block;
+}
+.form .form-info div{
+    display: inline-block;
+    height: 3px;
+    width: 2rem; 
+    background-color: #33C946;
+    vertical-align: middle;
+    margin-right: .2rem;
+}
+.form-img{
+    height: 100vh;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    background-image:url('assets/img/Group\ 232.png');
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.form .account p a{
+    color: #33C946;
+    float: right;
+}
+@media screen and (max-width: 1028px){
+    .form{
+    margin: 6rem 4rem 3rem 3rem;
+    }
+    .form .logo img{
+    position: absolute;
+    right: -15%;
+    }
+}
+@media screen and (max-width: 991px){
+    .form .logo img{
+        right: -12%;
+        top: -10%;
+    }
+    .form{
+    margin: 3rem 5rem 3rem 5rem;
+    }
+    .form-img{
+        display: none !important;
+    } 
+
+}
+@media screen and (max-width: 640px){
+   
+   .form {
+    padding-top: 3rem;
+   }
+}
