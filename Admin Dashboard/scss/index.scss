@@ -1,0 +1,606 @@
+@import "./variables";
+// font family Lato
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Coiny&family=Kanit:ital,wght@0,400;1,200&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500&family=Phudu:wght@800&family=Poppins&family=Roboto+Mono:ital,wght@0,200;1,500&family=Roboto:wght@100&family=Rubik+Iso&display=swap");
+
+*{
+  @include font;
+  text-decoration: none!important;
+
+}
+  
+
+// Empty classes for Javascript implementations
+.side-highlight {
+  background-color: $admin-green;
+  border: 1px solid $admin-green;
+  padding: 7px 15px;
+  border-width: 100%;
+  color: #ffffff;
+}
+
+.sidebar-display {
+  display: block !important;
+}
+//||||||||||||||||||||||||||||||||||||||||||||
+
+//Admin Login form
+.login {
+  position: absolute;
+  z-index: 101;
+  left: 0%;
+  width: 50%;
+  border-radius: 15px;
+  border-width: 0px;
+  height: 20rem;
+  div {
+    font-size: 10px !important;
+    height: 100%;
+    // border: 1px solid black;
+    input {
+      width: 40%;
+    }
+    input[type="submit"] {
+      width: 60%;
+      background-color: $admin-green;
+      border-radius: 10px;
+    }
+  }
+}
+nav {
+  .student-image-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .nav-logo {
+    display: none;
+  }
+  .btn-outline-success {
+    &:hover {
+      color: white;
+      background-color: $admin-green;
+    }
+  }
+}
+
+.menu .bi {
+  font-size: 40px;
+  font-weight: bolder;
+  position: absolute;
+  right: 5%;
+  display: none;
+}
+
+//the pie chart section
+.piechart {
+  section {
+    width: 50%;
+    height: 33vh;
+  }
+  .demo {
+    box-sizing: border-box;
+    height: 50vh;
+    border-radius: 15px;
+    background-color: $demography-color-100;
+  }
+  .title {
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+
+  .chart {
+    width: 50% !important;
+  }
+}
+
+// The side bar that is set to position fixed
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: $sidebar-background-color;
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+  button {
+    background-color: $logo-color;
+  }
+  .buttons {
+    div {
+      margin-bottom: 25px;
+      padding-left: 15px;
+
+      &:hover {
+        background-color: $admin-green;
+        border: 1px solid $admin-green;
+        padding: 7px 15px;
+        border-width: 100%;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// This is the dashboard
+.dashboard {
+  width: 90%;
+  margin-left: 21%;
+
+  .main-dashboard {
+    background-color: $admin-dashboard-background;
+    height: 170vh;
+    @include font;
+    .card-col {
+      height: 20vh;
+      margin-left: 8px;
+      width: 20%;
+      border-radius: 15px;
+      background-color: #92098f;
+
+      span {
+        color: $demography-color-300;
+        font-weight: bolder;
+        font-size: 20px;
+        margin-top: 90px !important;
+      }
+      .icon {
+        font-size: 30px;
+        margin-top: 10px;
+        color: white;
+      }
+    }
+  }
+}
+.cont {
+  height: fit-content;
+}
+
+//Total student Part
+.card-col:nth-child(1) {
+  @include gradient-color($stu-side-color, $main-dashboard);
+}
+
+// Total amount part
+.card-col:nth-child(2) {
+  @include gradient-color($total-amount-sidebar, $total-amount-bgcolor);
+}
+
+//total project part
+.card-col:nth-child(3) {
+  @include gradient-color($total-project-sidebar, $total-project-bgcolor);
+}
+
+//total certificate
+.card-col:nth-child(4) {
+  @include gradient-color(
+    $toal-certificate-sidebar,
+    $total-certificate-bgcolor
+  );
+}
+
+//mobile responsive part
+@media (max-width: 776px) {
+  .demo2 {
+    padding: 12px;
+    margin: 0px;
+
+    .reg-courses {
+      margin: 9px 6rem;
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .nav-logo {
+    display: block !important;
+    position: absolute;
+    top: 0px;
+    left: 60%;
+  }
+
+  //   The menu bar that hides the sidebar
+  .menu .bi {
+    display: block;
+  }
+
+  //   The nav align-items
+  .nav-item {
+    position: absolute;
+    left: 0px !important;
+  }
+  //The side bar displays off when in mobile mode
+  .sidebar {
+    // margin-top: 20%;
+    position: absolute;
+    height: 60%;
+    top: 10%;
+    right: 4%;
+    width: 33%;
+    display: none;
+    z-index: 5;
+    border-radius: 15px;
+    transition: all 0.5s ease-out;
+    transition-duration: 2s;
+  }
+  .dashboard {
+    margin-top: 5px;
+    width: 100%;
+    margin-left: 0px;
+
+    .grow {
+      display: block !important;
+      .col {
+        width: 70%;
+        margin: 15px auto;
+        padding-left: 35px;
+      }
+    }
+  }
+
+  .student-image-icon {
+    position: absolute;
+    right: 10% !important;
+  }
+
+  //The Pie chart for mobile responsiveness
+  .piechart {
+    .demo {
+      table {
+        margin-top: 6rem;
+      }
+
+      .title {
+        margin-top: 15rem;
+      }
+    }
+    .row {
+      display: block !important;
+      div {
+        margin: 7px auto !important;
+        width: 80%;
+      }
+    }
+  }
+
+  //main dashboard
+  .main-dashboard {
+    height: 340vh !important;
+    .upper-part {
+      span {
+        margin-left: 50%;
+      }
+    }
+  }
+
+  //list of graduants mobile responsiveness
+  .list-of-graduants {
+    margin-bottom: 5rem;
+    display: block !important;
+    .grad-div {
+      margin-bottom: 2rem;
+      .grad-txt {
+        background-position: calc(15rem - 5px) 5px !important;
+      }
+    }
+  }
+
+  //Next Page section for mobile responsiveness
+  .page-section {
+    margin-top: 11rem;
+  }
+
+  //Payments Page mobile responsiveness
+  .payments {
+    .list-of-students {
+      .grad-div:nth-child(2) {
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+//End of Mobile responsiveness
+//|||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+//Mobile responsiveness for tablet 958px
+@media (min-width: 777px) and (max-width: 958px) {
+  .page-section {
+    margin-top: 11rem;
+    margin-bottom: 25px;
+  }
+  .student-list {
+    margin-top: 3rem !important;
+    //background-color: blue!important;
+    height: 35rem !important;
+  }
+  .main-dashboard {
+    height: 240vh !important;
+  }
+  .grow {
+    display: block;
+    //background-color:yellow;
+    position: relative;
+    height: 20rem;
+    .col:nth-child(1) {
+      float: left;
+      width: 15rem;
+      margin-bottom: 20px;
+      margin-right: 2rem;
+    }
+
+    .col:nth-child(2) {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 15rem;
+      margin-bottom: 20px;
+    }
+
+    .col:nth-child(3) {
+      //float: left;
+      width: 15rem;
+      position: absolute;
+      bottom: 0px;
+      right: 9px;
+    }
+
+    .col:nth-child(4) {
+      width: 15rem;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+  }
+
+  .piechart {
+    .actual-chart {
+      height: 7rem;
+    }
+    .chart {
+      height: 7rem !important;
+    }
+  }
+}
+/*||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||End of tablet responsiveness||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+//contd of styling: demography of students
+.actual-chart {
+  border-radius: 50%;
+  transform: rotate(30deg);
+  background-image: conic-gradient(
+    $stu-side-color 0deg,
+    $stu-side-color 130deg,
+    $demography-color-300 130deg
+  );
+}
+.gender-section {
+  margin-top: 7rem;
+  .m-box {
+    @extend .box;
+    background-color: $demography-color-300;
+  }
+  .f-box {
+    @extend .box;
+    background-color: $stu-side-color;
+  }
+}
+
+.box {
+  width: 0.6rem;
+  height: 0.6rem;
+  max-width: 0.6rem;
+  max-height: 0.9rem;
+  min-width: 0.5rem;
+  min-height: 0.7rem;
+  border-radius: 2px;
+}
+.total-num {
+  color: $demography-color-300;
+}
+// registered courses
+.demo2 {
+  background-color: $total-project-bgcolor;
+  border-radius: 15px;
+
+  .programme-table {
+    .fs-box {
+      @extend .box;
+      background-color: $total-amount-sidebar;
+    }
+
+    .fe-box {
+      @extend .box;
+      background-color: $total-project-sidebar;
+    }
+
+    .be-box {
+      @extend .box;
+      background-color: $toal-certificate-sidebar;
+    }
+
+    .uiux-box {
+      @extend .box;
+      background-color: $stu-side-color;
+    }
+
+    tr {
+      padding: auto;
+    }
+  }
+  .chart {
+    transform: rotate(-20deg);
+    height: 16rem;
+    background-image: conic-gradient(
+      $total-project-sidebar 0deg,
+      $total-project-sidebar 72deg,
+      $toal-certificate-sidebar 72deg,
+      $toal-certificate-sidebar 151deg,
+      $stu-side-color 151deg,
+      $stu-side-color 230deg,
+      $total-amount-sidebar 230deg
+    );
+  }
+}
+.little-words {
+  font-size: 12px;
+}
+
+//List of graduants
+
+.list-of-graduants {
+  width: 90%;
+  height: 4rem;
+  font-size: 20px;
+  
+  input {
+    height: 2rem;
+    font-size: 15px;
+  }
+
+  .grad-div {
+    width: 25rem;
+    
+    .grad-txt {
+      @include search-bar;
+      background-position: calc(13rem - 5px) 5px;
+    }
+  }
+  .btn1 {
+    background-color: $filter-button-color;
+  }
+}
+
+//student List start here
+.student-list {
+  padding-top: 5rem;
+  border-radius: 15px;
+  height: 24rem;
+  background-color: white;
+
+  table {
+    width: 100%;
+    background-color: white;
+  }
+  tr {
+    border-bottom: 2px solid black;
+  }
+  td {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+
+//the payment section
+%card-width {
+  width: 40%;
+  height: 13rem;
+}
+%font-weight {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+%click-color {
+  background-color: $admin-green;
+  border: 1px solid $admin-green;
+  padding: 7px 15px;
+  border-width: 100%;
+  color: #ffffff;
+}
+.payments {
+  display: none;
+  height: 50rem;
+  background-color: $admin-dashboard-background;
+  .payment-col-1 {
+    border-radius: 15px;
+    @extend %card-width, %font-weight;
+    @include gradient-color($stu-side-color, $main-dashboard);
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: $stu-side-color;
+    }
+  }
+  .payment-col-2 {
+    border-radius: 15px;
+    @extend %card-width, %font-weight;
+    @include gradient-color($total-project-sidebar, $total-project-bgcolor);
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: $total-project-sidebar;
+    }
+  }
+  .icon {
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .list-of-students {
+    .btn1 {
+      background-color: $filter-button-color;
+    }
+  }
+  .payment-grad-txt {
+    @include search-bar;
+    background-position: 20rem 5px;
+  }
+  .table-div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 3px;
+    margin-top: 2rem;
+    .student-table {
+      width: 100%;
+
+      td {
+        font: {
+          size: 12px;
+          weight: lighter;
+        }
+      }
+    }
+  }
+
+  .pop-up {
+    border-radius: 13px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: $icon-color;
+    width: fit-content;
+    display: none;
+    text-decoration: none !important;
+  }
+}
+
+//Next page section
+.page-section {
+  section {
+    width: fit-content;
+  }
+  .next-div {
+    width: fit-content;
+  }
+  .go-btn {
+    background-color: $filter-button-color;
+    border-radius: 4px;
+    border-style: none;
+    padding: 5px 10px;
+  }
+  .input-tag {
+    width: 2rem;
+    border-radius: 3px;
+  }
+}
