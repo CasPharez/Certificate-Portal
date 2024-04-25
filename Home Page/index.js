@@ -1,228 +1,185 @@
-<!DOCTYPE html>
-<html lang="en" class="body-link">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificate Portal</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/9cceaa584a.js"
-      crossorigin="anonymous"
-    ></script>
+const studentLogin = document.getElementById('student-btn');
+const verifyStudent = document.getElementById('verify-btn');
+const verifyForm = document.getElementById('verify-form');
+const studentForm = document.getElementById('student-form');
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+// verify and student login display
+const showStudentForm = () => {
+  verifyForm.style.display = 'none';
+  studentForm.style.display = 'block';
+}
 
-  <body class="body-link">
-    <!-- Navigation bar  -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-1 sticky-top">
-      <div class="container-fluid">
-        <a
-          class="navbar-brand"
-          href="#"
-          style="width: 114px !important; height: 48px !important"
-          >Logo</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul
-            class="navbar-nav ms-5 me-auto mb-2 mb-lg-0"
-            style="margin-left: 300px !important"
-          >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >About Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">FAQs</a>
-            </li>
-          </ul>
+const showVerifyForm = () => {
+  verifyForm.style.display = "block";
+  studentForm.style.display = "none";
+};
 
-          <button class="btn btn-sm px-4">Login</button>
-        </div>
-      </div>
-    </nav>
+studentLogin.addEventListener('click', () => {
+  showStudentForm();
+});
 
-    <!-- Navigation Ends here -->
-
-    <section class="main-content text-center text-light">
-      <h1 class="main-content-head">Certificate Platform for Obidient Tech</h1>
-      <p>
-        Are you an employer, Do you want to verify a certificate? Click here to
-        verify your document
-      </p>
-      <div class="container">
-        <div class="toggle-buttons">
-          <button id="verify-btn" class="active btn btn-sm px-4 btn-toggle">
-            Verify Certificate
-          </button>
-          <button id="student-btn" class="btn btn-sm px-4 btn-toggle">Student Login</button>
-        </div>
-
-        <!-- verification form -->
-        <div id="verify-form" class="form rounded-3 pt-4">
-          <h4 class="mb-5">Verify Certificate</h4>
-          <form action="#" class='text-start form-main'>
-            <label for="">Enter the Certificate ID</label>
-            <input type="text" placeholder="Enter Certificate ID" class="verify-input rounded-3 py-2"/><br><br>
-            <a href="#" class="text-decoration-none text-dark fs-4">Click to scan QR code</a><br><br><br>
-            <button type="submit" class="verify-btn btn">Verify</button>
-          </form>
-        </div>
-
-        <!-- student login form -->
-        <div id="student-form" class="form-hidden form rounded-3 pt-4">
-          <h3>Student Login</h3>
-          <form action="" class='text-start form-main'>
-            <label for="">Enter your username or email</label>
-            <input type="text" id="username" placeholder="Username or email" class="verify-input rounded-3 py-2"/>
-            <div class="text-danger" id="username-error"></div>
-            <br>
-            <label for="">Enter your password</label>
-            <input type="password" name="" id="password" placeholder="password" class="verify-input rounded-3 py-2"/>
-            <div class="text-danger" id="password-error"></div>
-            <br>
-            <button type="submit" class="verify-btn btn" id="student-info">Login</button><br>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer section -->
-
-    <section class="footer w-100">
-      <div class="d-flex w-25 mx-auto justify-content-between mt-4">
-        <a href=""><i class="fa-brands fa-x-twitter text-white fs-3"></i></a>
-        <a href=""><i class="fa-brands fa-github text-white fs-3"></i></a>
-        <a href=""><i class="fa-brands fa-youtube text-white fs-3"></i></a>
-        <a href=""><i class="fa-brands fa-instagram text-white fs-3"></i></a>
-      </div>
-      <p class="text-center text-white mt-2 fs-6">
-        Copyright 2024 <span class="fs-5">&copy;</span>
-        <a
-          href="https://obidientstechspace.com"
-          class="text-decoration-none text-white"
-          >obidientstechspace.com</a
-        >
-      </p>
-    </section>
+verifyStudent.addEventListener('click', () => {
+  showVerifyForm();
+});
+// verify and student login display ends
 
 
-    <!-- This section is for student verification pop up -->
-    <div class="overlay" id="backdrop"></div>
+// verification pop up starts
+const verifyPop = document.getElementById('verification-popup');
+const backdrop = document.getElementById('backdrop');
+const verifyBtn = document.querySelector('.verify-btn');
 
-    
-    <dialog class="verify-container bg-white text-start rounded-3" id="verification-popup">
+const body = document.body;
+
+// opening of the verification pop up
+
+
+verifyBtn.addEventListener('click', () => {
+  verifyPop.show();
+  backdrop.style.display = 'block';
+  body.classList.add('modal-open');
   
-        <img src="../image/Rectangle 56.png" alt="" class="student-img">
-        <h3 class="text-center my-3">LUCKY BENJAMIN</h3>
-        <div class="row mb-4">
-          <div class="col-sm-6 mb-1">CERTIFICATE No:</div>
-          <div class="col-sm-6 mb-1">AD123DA234</div>
-          <div class="col-sm-6 mb-1">DATE ISSUED:</div>
-          <div class="col-sm-6 mb-1">10th April, 2024</div>
-          <div class="col-sm-6 mb-1">COURSE:</div>
-          <div class="col-sm-6 mb-1">FRONT END</div>
-          <div class="col-sm-6 mb-1">GENDER:</div>
-          <div class="col-sm-6">MALE</div>
-        </div>
-      
-        <button type="submit" class="btn w-100 text-white" id="back-home">Back to Home</button>
-      
-    </dialog>
+});
+
+// return back home from the verification pop up
+const backHome = document.getElementById('back-home');
+backHome.addEventListener('click', () => {
+  verifyPop.close()
+  backdrop.style.display = "none";
+  body.classList.remove("modal-open");
+});
 
 
-    <!-- This section ends for student verification pop up -->
+// open the student no record pop up
+// const noRecord = document.getElementById('no-record');
+// verifyBtn.addEventListener("click", () => {
+//   noRecord.show();
+//   backdrop.style.display = "block";
+//   body.classList.add("modal-open");
+// });
 
-     <!-- This section is for student verification pop up No Record-->
+// return back home from the No record pop up
+const backHomeTwo = document.getElementById('back-home-two');
 
-    <dialog class="verify-container bg-white text-start rounded-3" id="no-record">
-
-        <div class="">
-          <h2 class="text-danger text-center">NO RECORD FOUND</h2>
-          <p class="text-center">Please check the certificate number and try again</p>
-          
-        </div>
-      
-        <button type="submit" class="btn w-100 text-white" id="back-home-two">Try Again</button>
-      
-    </dialog>
-
-
-    <!-- This section ends for student verification pop up  No Record-->
-
-    <!-- This section is for the student upload credential page -->
-
-    <dialog class="verify-container bg-white text-start rounded-3" id="credential">
-      <h3>Upload your Credentials</h3>
-      <span class="close-btn" id="close-btn"><i class="fa-solid fa-xmark fs-4"></i></span>
-      <hr>
-      <p>Please enter your full name the way you want it to appear on your Certificate</p>
-      <form action="" class='text-start'>
-        <label for="">Full name</label>
-        <input type="text" id="" placeholder="Firstname Surname" class="verify-input2 rounded-3 py-2"/><br><br>
-        <label for="">Email</label>
-        <input type="text" id="" placeholder="Enter your email" class="verify-input2 rounded-3 py-2"/><br><br>
-        <label for="">Phone number</label>
-        <input type="number" name="" id="" placeholder="Phone number" class="verify-input2 rounded-3 py-2"/><br><br>
-        <button type="submit" class="verify-btn2 btn" id="payment-popup">Submit and make Payment</button><br>
-      </form> 
-      
-    </dialog>
-    <!-- This ends the student upload credential page -->
-
-
-    <!-- This section is for the payment page -->
-
-    <dialog class="verify-container bg-white text-start rounded-3" id="payment">
-      <h3>Payment</h3>
-      <span class="close-btn" id="close-btn2"><i class="fa-solid fa-xmark fs-4"></i></span>
-      <hr>
-      <p>Make payment of &#8358;10,000 or $13 for your Certificate </p>
-      <form action="" class='text-start'>
-        <label for="">Card details</label>
-        <input type="number" name="number" placeholder="Card no" class="verify-input2 rounded-3 py-2"/><br><br>
-        <input type="number" name="cv" placeholder="Enter your CV no" class="verify-input2 rounded-3 py-2"/><br><br>
-        <input type="number" name="Number" id="" placeholder="Card pin" class="verify-input2 rounded-3 py-2"/><br><br>
-        <button type="submit" class="verify-btn2 btn">Make Payment</button><br>
-      </form> 
-      
-    </dialog>
-    <!-- This ends the student payment page -->
+backHomeTwo.addEventListener("click", () => {
+  noRecord.close();
+  backdrop.style.display = "none";
+  body.classList.remove("modal-open");
+});
+// verification pop up ends
 
 
 
-    
+
+// VALIDATION STARTS - BY MAYOR
+
+// students credential popup starts
+const credential = document.getElementById('credential');
+const studentInfo = document.getElementById('student-info');
+
+// opening of the student credential form
+studentInfo.addEventListener('click', (event) => {
+
+    event.preventDefault(); 
+
+    var formData = {
+        username: document.getElementById("username").value.trim(),
+        password: document.getElementById("password").value.trim(),
+    };
+
+    // Validate the form data
+    var errors = validateForm(formData);
+
+    // Display errors, if any
+    displayErrors(errors);
+
+    // If there are no errors, proceed with form submission
+    if (Object.keys(errors).length === 0) {
+        console.log("Form is valid");
+        
+
+
+      // If no errors in my array FileList, then proceed with below
+        credential.show();
+        backdrop.style.display = "block";
+        body.classList.add("modal-open");
+    }
+ 
+});
+
+// return from the student credential pop up
+const closeBtn = document.getElementById('close-btn');
+closeBtn.addEventListener('click', () => {
+  credential.close();
+  backdrop.style.display = "none";
+  body.classList.remove("modal-open");
+});
+
+
+// students credential popup ends
+
+// student payment for certificate 
+
+// opening of the student payment popup
+const payment = document.getElementById('payment');
+const paymentBtn = document.getElementById('payment-popup');
+paymentBtn.addEventListener('click', () => {
+  payment.show();
+  backdrop.style.display = "block";
+  body.classList.add("modal-open");
+  credential.close();
+});
+
+// return home from the student payment popup
+const closeBtn2 = document.getElementById("close-btn2");
+
+closeBtn2.addEventListener("click", () => {
+  payment.close();
+  backdrop.style.display = "none";
+  body.classList.remove("modal-open");
+});
 
 
 
-    <script src="./index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+
+
+
+// VALIDATION FUNCTIONS
+
+
+// Function to validate the form data
+function validateForm(formData) {
+    var errors = {};
+
+    // Validate the username or email
+    if (!formData.username) {
+        errors.username = "Username or email is required";
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.username) && formData.username.length < 3) {
+        errors.username = "Invalid username or email";
+    }
+
+    // Validate the password
+    if (!formData.password) {
+        errors.password = "Password is required";
+    } else if (formData.password.length < 8) {
+        errors.password = "Password must be at least 8 characters long";
+    }
+
+    return errors;
+}
+
+// Function to display errors on the form
+function displayErrors(errors) {
+    // Clear previous error messages
+    document.getElementById("username-error").innerText = '';
+    document.getElementById("password-error").innerText = '';
+
+    // Display errors for each field with errors
+    if (errors.username) {
+        document.getElementById("username-error").innerText = errors.username;
+    }
+    if (errors.password) {
+        document.getElementById("password-error").innerText = errors.password;
+    }
+}
+
