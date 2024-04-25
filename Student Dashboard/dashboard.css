@@ -1,0 +1,189 @@
+/* .header{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+} */
+
+.dashboard-img{
+    width: 53px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .student-dashboard{
+    background-color: #F8FFF8;
+    min-height: fit-content;
+  }
+  .side-bar{
+    position: fixed;
+    top: 58px;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    padding: 25px 40px;
+    /* border-right: 2px solid #000; */
+     @media screen and (max-width:768px){
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      width: 100%;
+      position: absolute;
+      padding: 15px 20px;
+    
+    }
+  }
+  
+  .student-content{
+    position: absolute;
+    left: 270px;
+    right: 0;
+    padding: 25px 40px;
+    @media screen and (max-width:768px) {
+      left: 0;
+      top: 180px;
+    }
+  }
+  
+  .card-one{
+    background-color: #FAEEFF;
+    margin-bottom: 1rem;
+    height: 75px !important;
+    cursor: pointer;
+  
+    @media screen and (max-width:768px) {
+      height: 105px !important;
+    }
+  }
+  
+  .card-two{
+    background-color: #E9F5E9;
+    margin-bottom: 1rem;
+    height: 75px !important;
+    cursor: pointer;
+    @media screen and (max-width:768px) {
+      height: 105px !important;
+    }
+  }
+  
+  .card-three{
+    background-color: #E5F2FF;
+    margin-bottom: 2.5rem;
+    height: 75px !important;
+    cursor: pointer;
+    @media screen and (max-width:768px) {
+      height: 105px !important;
+    }
+  }
+  
+  .img-container{
+    width: 220px;
+    @media screen and (max-width:768px) {
+      display: none;
+    }
+  }
+  
+  .img-container2{
+    display: none;
+     @media screen and (max-width:768px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  .img-container img{
+    width: 100%;
+  }
+  
+  /* students contents start here */
+  .student-img{
+    width: 220px;
+    height: 120px;
+  }
+  
+  .profile{
+    width: 100%;
+    background-color: #09920C;
+  }
+  
+  
+  .card-img{
+    height: 130px;
+    @media screen and (max-width:1102px) {
+      height: 160px;
+    }
+    @media screen and (max-width:900px) {
+      height: 180px;
+    }
+    @media screen and (max-width:774px) {
+      height: 170px;
+    }
+  }
+  
+  /* the solo project pop-up starts */
+  .Payment{
+    background-color: #FAEEFF;
+    /* text-align: center; */
+    
+    padding: 22px 0px 22px 15px;
+    border-radius: 12px;
+    
+  }
+  
+  
+  .Certificate{
+    background-color: #E9F5E9;
+    /* text-align: center; */
+    padding: 22px 0px 22px 15px;
+    border-radius: 12px;
+    /* margin-left: 300px; */
+  }
+  
+  .success{
+      color: #067007;
+      font-weight: 700;
+  }
+  .danger{
+      color: #D11A2A;
+      font-weight: 700;
+  }
+  
+  .solo-project{
+    background-color: #FDFDFD;
+    display: none;
+  }
+  
+  .certificate-tab{
+    display: none;
+  }
+  
+  .btn1{
+    background-color: #DDEED6;
+  }
+  
+  .btn2{
+    background-color: #09920C;
+  }
+  
+  .certificate-display{
+    background-color: #FDFDFD;
+    position: relative;
+  }
+  
+  .btn3{
+    color: #09920C;
+    border: 1px solid #09920C;
+    position: absolute;
+    right: 130px;
+    margin-bottom: 80px;
+  }
+  
+  .certificate-img{
+    margin-top: 150px;
+    min-height: fit-content;
+    background-color: #FDFDFD;
+  }
+  
+  .info-text{
+    font-size: 13px;
+    margin-top: 9px;
+  }
